@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Maven Wrapper Bootstrap Script for Unix-like systems
+# (Not used on Windows, kept for completeness)
+
+MVNW_REPOURL="https://repo.maven.apache.org/maven2"
+
+if [ -z "$JAVA_HOME" ] && command -v java >/dev/null 2>&1; then
+  JAVA_CMD="java"
+else
+  JAVA_CMD="$JAVA_HOME/bin/java"
+fi
+
+WRAPPER_JAR_DIR="$HOME/.m2/wrapper"
+WRAPPER_JAR="$WRAPPER_JAR_DIR/maven-wrapper.jar"
+
+mkdir -p "$WRAPPER_JAR_DIR"
+
+if [ ! -f "$WRAPPER_JAR" ]; then
+  echo "Downloading maven-wrapper.jar..."
+  curl -sSf "$MVNW_REPOURL/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper-3.2.0.jar" -o "$WRAPPER_JAR"
+fi
+
+exec "$JAVA_CMD" -jar "$WRAPPER_JAR" "$@"
+
