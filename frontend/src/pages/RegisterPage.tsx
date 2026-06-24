@@ -79,7 +79,7 @@ export default function RegisterPage() {
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            style={inputStyle}
+            className="icare-input"
             type="email"
             placeholder="name@example.com"
             required
@@ -93,7 +93,7 @@ export default function RegisterPage() {
           <input
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            style={inputStyle}
+            className="icare-input"
             placeholder="Your full name"
           />
 
@@ -105,7 +105,7 @@ export default function RegisterPage() {
           <select
             value={role}
             onChange={(e) => setRole(e.target.value as any)}
-            style={inputStyle}
+            className="icare-input"
             required
           >
             <option value="ROLE_PATIENT">Patient</option>
@@ -120,7 +120,7 @@ export default function RegisterPage() {
           <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            style={inputStyle}
+            className="icare-input"
             type="password"
             placeholder="••••••••"
             required
@@ -132,13 +132,13 @@ export default function RegisterPage() {
             </div>
           ) : null}
 
-          <button type="submit" disabled={loading} style={buttonStyle}>
+          <button type="submit" disabled={loading} style={buttonStyle} className="icare-button">
             {loading ? 'Creating...' : 'Create account'}
           </button>
 
           <div style={{ marginTop: 10, fontSize: 12, color: theme.muted }}>
             Already have an account?{' '}
-            <a href="/login" style={{ color: theme.brand, fontWeight: 800 }}>
+            <a href="/login" style={{ color: theme.brand, fontWeight: 800 }} className="icare-link">
               Login
             </a>
           </div>
@@ -148,25 +148,21 @@ export default function RegisterPage() {
   );
 }
 
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  marginTop: 6,
-  padding: '10px 12px',
-  borderRadius: 12,
-  border: '1px solid #e5e7eb',
-  outline: 'none',
-  fontSize: 14,
-};
+// inputStyle removed (using .icare-input from src/styles/form.css)
 
 const buttonStyle: React.CSSProperties = {
   marginTop: 16,
   width: '100%',
-  background: '#22c55e',
+  background: theme.brand,
   color: '#052e16',
-  border: '1px solid rgba(34,197,94,0.45)',
+  border: `1px solid rgba(34,197,94,0.45)`,
   borderRadius: 12,
   padding: '10px 12px',
   fontWeight: 900,
   cursor: 'pointer',
+  boxSizing: 'border-box',
+  transition: 'transform 80ms ease, filter 140ms ease, box-shadow 140ms ease',
+  boxShadow: '0 0 0 rgba(34,197,94,0)',
 };
+
 

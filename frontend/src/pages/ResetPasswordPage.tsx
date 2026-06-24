@@ -53,7 +53,7 @@ export default function ResetPasswordPage() {
           <input
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            style={inputStyle}
+            className="icare-input"
             type="password"
             placeholder="••••••••"
             required
@@ -65,7 +65,7 @@ export default function ResetPasswordPage() {
             </div>
           ) : null}
 
-          <button type="submit" disabled={loading} style={buttonStyle}>
+          <button type="submit" disabled={loading} style={buttonStyle} className="icare-button">
             {loading ? 'Updating...' : 'Update password'}
           </button>
         </form>
@@ -74,25 +74,18 @@ export default function ResetPasswordPage() {
   );
 }
 
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  marginTop: 6,
-  padding: '10px 12px',
-  borderRadius: 12,
-  border: '1px solid #e5e7eb',
-  outline: 'none',
-  fontSize: 14,
-};
-
 const buttonStyle: React.CSSProperties = {
   marginTop: 16,
   width: '100%',
-  background: '#22c55e',
+  background: theme.brand,
   color: '#052e16',
-  border: '1px solid rgba(34,197,94,0.45)',
+  border: `1px solid rgba(34,197,94,0.45)`,
   borderRadius: 12,
   padding: '10px 12px',
   fontWeight: 900,
   cursor: 'pointer',
+  boxSizing: 'border-box',
+  transition: 'transform 80ms ease, filter 140ms ease, box-shadow 140ms ease',
+  boxShadow: '0 0 0 rgba(34,197,94,0)',
 };
 

@@ -1,0 +1,25 @@
+:root{--input-border:#e5e7eb;--input-hover:#22c55e;}
+.icare-input{
+  width:100%;
+  margin-top:6px;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--input-border);
+  background:#fff;
+  outline:none;
+  font-size:14px;
+  box-sizing:border-box;
+  transition:border-color 140ms ease, box-shadow 140ms ease;
+}
+.icare-input:hover{
+  border-color: var(--input-hover);
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.15);
+}
+.icare-input:focus{
+  border-color: var(--input-hover);
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.20);
+}
+.icare-input:focus-visible{
+  outline:none;
+}
+

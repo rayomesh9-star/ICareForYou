@@ -1,0 +1,31 @@
+.icare-button{
+  width:100%;
+  border-radius:12px;
+  padding:10px 12px;
+  font-weight:900;
+  cursor:pointer;
+  box-sizing:border-box;
+  transition: transform 80ms ease, filter 140ms ease, box-shadow 140ms ease;
+}
+
+.icare-button:hover{
+  box-shadow: 0 0 18px rgba(34,197,94,0.45) !important;
+  transform: translateY(-1px);
+}
+
+.icare-link{
+  transition: color 140ms ease, transform 120ms ease;
+}
+
+.icare-link:hover{
+  color: rgba(34,197,94,1);
+  transform: translateY(-1px);
+}
+
+
+.icare-button:disabled{
+  cursor:not-allowed;
+  opacity:0.7;
+  box-shadow:none !important;
+}
+

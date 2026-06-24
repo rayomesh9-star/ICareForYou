@@ -1,17 +1,18 @@
-# IcareForYou - Build Plan
+# IcareForYou - Build Steps Log
 
-- [x] Step 1: Create backend (Spring Boot) project structure + build files
-- [x] Step 2: Create frontend (React + TypeScript) project structure + build files
-- [x] Step 3: Create project scaffolding folders and placeholder pages
-- [ ] Step 4: Finish frontend dependency install + run (npm install, vite)
-- [ ] Step 5: Add backend package structure (config, security, domain, dto, controllers)
-- [ ] Step 6: Add PostgreSQL config + Flyway migrations
-- [ ] Step 7: Implement Entities + Repositories (Users/Patients/Doctors/Appointments/Departments)
-- [ ] Step 8: Implement JWT auth + Spring Security configuration
-- [ ] Step 9: Implement API controllers + DTOs + validation
-- [ ] Step 10: Enable OpenAPI/Swagger
-- [ ] Step 11: Implement frontend API client + auth flow
-- [ ] Step 12: Implement UI pages/components for appointments, doctors, patients
-- [ ] Step 13: Run backend build + frontend typecheck/build
-- [ ] Step 14: Provide run instructions in README files
+- [x] Step 0: Repo scan + initial scaffold
+- [x] Step 1: Create backend/frontend directories + README
+- [x] Step 2: Create basic Gradle-based backend scaffolding files
+- [x] Step 3: Frontend auth routing fixes (`Register`, `Forgot`, `Reset` pages)
+- [x] Step 4: Improve auth page layout so inputs fit inside card
+  - [x] LoginPage input/button styles
+  - [x] RegisterPage input/button styles
+  - [x] ForgotPasswordPage input/button styles
+  - [x] ResetPasswordPage input/button styles
+- [x] Step 5: Add hover/focus styling for text fields + cards using shared CSS (`.icare-input`)
+  - [x] Create `frontend/src/styles/form.css`
+  - [x] Import CSS globally in `frontend/src/main.tsx`
+  - [x] Update Login/Register/Forgot/Reset pages to use `className="icare-input"`
+- [ ] Step 6: Update Card component hover styling to match new design
+
 
